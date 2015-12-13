@@ -13,7 +13,6 @@ include('inc/config.php');
 <a href="index.php">Homepage</a><br>
 <h1>Image Viewer</h1>
 <?php
-
 $sql = mysql_query("SELECT * FROM logos WHERE pid = '".$_GET['id']."'");
 $res = mysql_fetch_array($sql);
 
@@ -25,7 +24,6 @@ echo '<table>
 </table>';
 
 echo '<img src="img/'.$res['filename'].'" alt="'.$res['filename'].'">';
-
 ?>
 <br>
 <a href="login.php">User Login</a><br>

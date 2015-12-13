@@ -12,7 +12,6 @@ session_start();
 
 <a href="category.php">Category</a><br>
 <a href="comments.php">Comments</a><br>
-<!--<a href="imgview.php">Image Viewer</a><br>-->
 <a href="login.php">User Login</a><br>
 
 </body>

@@ -3,11 +3,8 @@ set_time_limit(0);
 session_start();
 include('inc/config.php');
 if (isset($_GET['do']) && $_GET['do'] == 'comment') {
-    echo 'do get<br>';
     if (isset($_POST['sendcomment'])) {
-        echo 'do post<br>';
         if (!$addsql = mysql_query("INSERT INTO comments (name, text) VALUES ('" . $_POST['name'] . "', '" . $_POST['comment'] . "')")) {
-//        if (!$addsql = mysql_query("INSERT INTO comments (name, text) VALUES ('" . mysql_real_escape_string($_POST['name']) . "', '" . mysql_real_escape_string($_POST['comment']) . "')")) {
             echo mysql_errno() . ' - ' . mysql_error();
         }
 
@@ -18,7 +15,6 @@ if (isset($_GET['do']) && $_GET['do'] == 'comment') {
         </table>';
     }
 }
-
 ?>
 <!doctype html>
 <html>
